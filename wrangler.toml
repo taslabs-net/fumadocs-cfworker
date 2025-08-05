@@ -1,0 +1,34 @@
+main = ".open-next/worker.js"
+name = "fumadocs-cloudflare"
+# account_id = "your-account-id-here"
+compatibility_date = "2025-08-04"
+
+# Enable Node.js API
+# see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#nodejs-compatibility-flag
+# Allow to fetch URLs in your app
+# see https://developers.cloudflare.com/workers/configuration/compatibility-flags/#global-fetch-strictly-public
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+# The service should match the "name" of your worker
+service = "fumadocs-cloudflare"
+
+# [[kv_namespaces]]
+# binding = "your-kv-namespace"
+# id = "your-kv-namespace-id"
+
+# [[r2_buckets]]
+# binding = "your-r2-bucket"
+# bucket_name = "your-bucket-name"
+
+# [[r2_buckets]]
+# binding = "NEXT_INC_CACHE_R2_BUCKET"
+# bucket_name = "your-cache-bucket-name"
+
+[observability.logs]
+enabled = true
