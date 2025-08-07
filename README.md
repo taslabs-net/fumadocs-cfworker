@@ -1,5 +1,7 @@
 # Fumadocs on Cloudflare Workers
 
+[![Cloudflare Workers](https://img.shields.io/badge/Powered%20by-Cloudflare%20Workers-orange?style=for-the-badge&logo=cloudflare)](https://workers.cloudflare.com/)
+
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/taslabs-net/fumadocs-cfworker)
 
 A modern, fast documentation site built with [Fumadocs](https://fumadocs.dev) and deployed on [Cloudflare Workers](https://workers.cloudflare.com). This template provides everything you need to create beautiful documentation that runs at the edge.
